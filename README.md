@@ -1,1 +1,1 @@
-Hii - This is my persoanl porfolio.
+Hii - This is my personal porfolio.
