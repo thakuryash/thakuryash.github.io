@@ -21,10 +21,10 @@ function App() {
   const [sidebarStatus,setSideBarStatus] = useState(true);
 
 
-  // disabling the context menu(right click)
-  // useEffect(() => {
-  //   document.addEventListener('contextmenu', (e)=>e.preventDefault());      
-  // }, []);
+  //disabling the context menu(right click)
+  useEffect(() => {
+    document.addEventListener('contextmenu', (e)=>e.preventDefault());      
+  }, []);
 
   // theme changer 
   function getLocatThemeData (){
