@@ -1,7 +1,7 @@
 {
     "name": "personal-portfolio",
     "version": "0.4.1",
-    "homepage": "https://thakuryash.github.io/ythakur/",
+    "homepage": "https://yashthakur.github.io",
     "private": true,
     "dependencies": {
         "@emailjs/browser": "^3.11.0",
