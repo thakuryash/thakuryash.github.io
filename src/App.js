@@ -94,8 +94,8 @@ function App() {
         </div>
 
         <Switching>
-          <Route path="/" exact>
-            <Homepage />
+          <Route exact path="/ythakur">
+            <Redirect to="/" />
           </Route>
           <Route path="/about" exact>
             <Aboutpage />
