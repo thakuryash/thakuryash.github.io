@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import resume from '../img/yash_thakur.jpeg'
+import resume from '../img/portfolios/golfing.JPG'
 import { InnerLayout } from '../styles/layouts'
 import Primarybutton from './primarybutton'
 function Imagesection () {
