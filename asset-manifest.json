@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.7e00378d.js",
+    "main.js": "/static/js/main.bb36026a.js",
     "static/media/blog1.jpg": "/static/media/blog1.64262f1e597897ea4dec.jpg",
     "static/media/blog2.jpg": "/static/media/blog2.1fa97647e538a19e4324.jpg",
     "static/media/blog4.jpg": "/static/media/blog4.7a9349df8026edfad34e.jpg",
     "static/media/blog3.jpg": "/static/media/blog3.da70f05888a1e048528e.jpg",
     "static/media/yash_thakur.jpeg": "/static/media/yash_thakur.9b15cf396cd20a38d02f.jpeg",
+    "static/media/Yash Thakur.pdf": "/static/media/Yash Thakur.b55df08a56d615a81058.pdf",
     "static/media/Technician.png": "/static/media/Technician.9bb935ebe58fc27b08e1.png",
     "static/media/Caloriestracker.png": "/static/media/Caloriestracker.0237a392d457eab652bd.png",
     "index.html": "/index.html",
-    "main.7e00378d.js.map": "/static/js/main.7e00378d.js.map"
+    "main.bb36026a.js.map": "/static/js/main.bb36026a.js.map"
   },
   "entrypoints": [
-    "static/js/main.7e00378d.js"
+    "static/js/main.bb36026a.js"
   ]
 }
