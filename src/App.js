@@ -161,7 +161,7 @@ function App() {
       <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
 
       <div ref={sidebarRef}>
-        <Sidebar sidebarStatus={sidebarStatus} />
+        <Sidebar sidebarStatus={sidebarStatus} onLinkClick={() => setSideBarStatus(true)} />
       </div>
 
       <motion.div className="hamburger-menu-icon-section" onClick={sideBarOpenClose} whileTap={{ scale: 0.9 }}>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import resume from "../img/yash_thakur.jpeg";
+import resumePDF from "../resume/Yash Thakur.pdf";
 import { InnerLayout } from "../styles/layouts";
 import Primarybutton from "./primarybutton";
 import { motion } from "framer-motion";
@@ -92,7 +93,7 @@ function Imagesection() {
               </div>
             </div>
 
-            <Primarybutton title="Download CV" />
+            <Primarybutton title="Download CV" link={resumePDF} />
           </motion.div>
         </ImagesectionStyled>
       </motion.div>

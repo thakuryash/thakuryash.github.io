@@ -79,7 +79,7 @@ const ResumeitemStyled = styled.div`
       content: "";
       position: absolute;
       left: 0;
-      top: 15px;
+      top: 12px;
       height: 2px;
       width: 3rem;
       background: var(--primary-gradient);
@@ -89,6 +89,7 @@ const ResumeitemStyled = styled.div`
       color: var(--white-color);
       font-size: 1.6rem;
       padding-bottom: 0.4rem;
+      padding-left: 0.5rem;
       font-weight: 700;
       background: var(--primary-gradient);
       -webkit-background-clip: text;
@@ -98,6 +99,7 @@ const ResumeitemStyled = styled.div`
 
     h6 {
       padding-bottom: 0.4rem;
+      padding-left: 0.5rem;
       font-size: 1.2rem;
       color: var(--font-light-color);
       font-weight: 600;
@@ -105,6 +107,7 @@ const ResumeitemStyled = styled.div`
 
     .location {
       font-size: 0.9rem;
+      padding-left: 0.5rem;
       color: var(--secondary-color);
       font-style: italic;
       margin-bottom: 0.6rem;
@@ -112,6 +115,7 @@ const ResumeitemStyled = styled.div`
 
     p {
       line-height: 1.8;
+      padding-left: 0.5rem;
       color: var(--font-light-color);
       font-size: 1rem;
     }
@@ -127,7 +131,42 @@ const ResumeitemStyled = styled.div`
 
     .right-content {
       width: 100%;
-      padding-left: 2rem;
+      padding-left: 3rem;
+
+      &::before {
+        width: 2rem;
+        top: 10px;
+      }
+
+      h5 {
+        font-size: 1.3rem;
+      }
+
+      h6 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .right-content {
+      padding-left: 2.5rem;
+
+      &::before {
+        width: 1.5rem;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+      }
+
+      h6 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
     }
   }
 `;

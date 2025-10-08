@@ -5,7 +5,7 @@ import avatar from "../img/yash_thakur.jpeg";
 import Tilty from "react-tilty";
 import { motion } from "framer-motion";
 
-function Navigation() {
+function Navigation({ onLinkClick }) {
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: i => ({
@@ -17,6 +17,13 @@ function Navigation() {
         ease: "easeOut",
       },
     }),
+  };
+
+  const handleLinkClick = () => {
+    // Close sidebar on mobile when link is clicked
+    if (onLinkClick) {
+      onLinkClick();
+    }
   };
 
   return (
@@ -56,6 +63,7 @@ function Navigation() {
               }
               activeClassName="active-class"
               exact
+              onClick={handleLinkClick}
             >
               {item}
             </NavLink>

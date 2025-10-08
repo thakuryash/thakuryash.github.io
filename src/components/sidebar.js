@@ -5,7 +5,7 @@ import Navigation from "./navigation";
 const Sidebar = function (props) {
   return (
     <SidebarStyled className={props.sidebarStatus ? "sidebarhide" : ""}>
-      <Navigation />
+      <Navigation onLinkClick={props.onLinkClick} />
     </SidebarStyled>
   );
 };
