@@ -42,7 +42,7 @@ function Blogpage() {
               <p>Golf content, tips, and more!</p>
             </div>
             <motion.a
-              href="https://www.youtube.com/@thakurgolf"
+              href="https://www.youtube.com/@teetimeyatra"
               target="_blank"
               rel="noopener noreferrer"
               className="subscribe-btn"
@@ -76,7 +76,10 @@ function Blogpage() {
                     <PlayCircleOutlineIcon className="play-icon" />
                   </div>
                 </div>
-                <p className="short-title">{short.title}</p>
+                <div className="short-meta">
+                  <p className="short-title">{short.title}</p>
+                  <span className="watch-cta">Watch on YouTube</span>
+                </div>
               </motion.a>
             ))}
           </div>
@@ -162,20 +165,30 @@ const BlogsStyled = styled.div`
 
   .shorts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    justify-content: center;
+    gap: 1.4rem;
     margin-bottom: 4rem;
 
     .short-item {
       text-decoration: none;
       cursor: pointer;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: var(--background-dark-gray);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-smooth);
+
+      &:hover {
+        box-shadow: var(--card-hover-shadow);
+      }
 
       .short-thumbnail {
         position: relative;
-        border-radius: 15px;
-        overflow: hidden;
         aspect-ratio: 9/16;
         background: var(--background-dark-gray);
+        max-height: 360px;
 
         img {
           width: 100%;
@@ -194,11 +207,11 @@ const BlogsStyled = styled.div`
           display: flex;
           align-items: center;
           justify-content: center;
-          opacity: 0;
+          opacity: 1;
           transition: var(--transition-smooth);
 
           .play-icon {
-            font-size: 4rem;
+            font-size: 3.2rem;
             color: white;
           }
         }
@@ -214,12 +227,23 @@ const BlogsStyled = styled.div`
         }
       }
 
+      .short-meta {
+        padding: 0.75rem 0.8rem 0.9rem;
+      }
+
       .short-title {
-        margin-top: 1rem;
         color: var(--white-color);
-        font-size: 1.1rem;
+        font-size: 0.98rem;
         font-weight: 600;
-        text-align: center;
+        text-align: left;
+      }
+
+      .watch-cta {
+        display: inline-block;
+        margin-top: 0.35rem;
+        font-size: 0.82rem;
+        color: var(--primary-color-light);
+        font-weight: 700;
       }
     }
   }
@@ -289,7 +313,8 @@ const BlogsStyled = styled.div`
     }
 
     .shorts-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(160px, 210px));
+      gap: 1rem;
     }
 
     .blog {
@@ -299,7 +324,7 @@ const BlogsStyled = styled.div`
 
   @media screen and (max-width: 480px) {
     .shorts-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(180px, 240px);
     }
   }
 `;

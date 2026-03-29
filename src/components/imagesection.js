@@ -61,7 +61,7 @@ function Imagesection() {
               </h4>
             </div>
             <p className="paragraph">
-              With over seven years of experience in software development, I have honed my skills in both front-end and
+              With over nine years of experience in software development, I have honed my skills in both front-end and
               back-end work. My primary focus has been on developing web applications that are user-friendly, visually
               attractive, and perform optimally on all devices. I make it a priority to keep updated with the latest
               industry trends and technologies to continually enhance my skillset. I am deeply passionate about

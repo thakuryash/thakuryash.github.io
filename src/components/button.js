@@ -4,8 +4,14 @@ const Button = (props) => {
    
    return (<ButtonsStyled >
             {props.button.map((but,i)=>{
+                    const isActive = props.activeButton === but;
 
-                    return <ButtonStyled key={i} onClick={()=>{props.filter(but)}}>
+                    return <ButtonStyled
+                        key={i}
+                        onClick={()=>{props.filter(but)}}
+                        className={isActive ? "active" : ""}
+                        aria-pressed={isActive}
+                    >
                         {but}
                     </ButtonStyled>
                 })
@@ -25,10 +31,14 @@ font-size:inherit;
 color:var(--white-color);
 cursor:pointer;
 transition: all 0.4s ease-in-out;
+border-radius: 8px;
 &:active,&:focus{
     background: var(--primary-color);
 }
 &:hover{
+    background: var(--primary-color);
+}
+&.active{
     background: var(--primary-color);
 }
 &:not(:last-child){
@@ -47,9 +57,10 @@ margin:2.4rem auto;
 height:100px;
 
 @media screen and (max-width: 1350px){
-       flex-direction:column;
+       flex-direction:row;
        overflow-x:scroll;
        overflow-y:hidden;
+       justify-content: flex-start;
         &::-webkit-scrollbar{
             width: 9px;
             background-color: #383838;

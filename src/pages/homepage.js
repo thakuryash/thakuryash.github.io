@@ -4,9 +4,11 @@ import ParticlesContainer from "../components/particles";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   // Create Ref element.
@@ -14,7 +16,7 @@ function Homepage() {
 
   useEffect(() => {
     const typed = new Typed(element.current, {
-      strings: ["Yash Thakur", "Full Stack Developer", "React Specialist", "Cloud Engineer"], // Strings to display
+      strings: ["Yash Thakur", "Full Stack Developer", "Founder @ CarWorthAI", "React Specialist", "Cloud Engineer"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 100,
@@ -73,8 +75,21 @@ function Homepage() {
           Hello I'm <span ref={element}></span>
         </motion.h1>
         <motion.p className="subtitle" variants={itemVariants}>
-          Full Stack Developer | 7+ Years Experience | React & Cloud Specialist
+          Full Stack Developer | 9+ Years Experience | React & Cloud Specialist
         </motion.p>
+        <motion.div className="project-spotlight" variants={itemVariants}>
+          <RocketLaunchIcon />
+          <p>
+            New launch: <a href="https://carworthai.ca/" target="_blank" rel="noopener noreferrer">carworthai.ca</a> -
+            AI powered vehicle valuation platform.
+          </p>
+        </motion.div>
+        <motion.div className="cta-group" variants={itemVariants}>
+          <Link to="/portfolios">Explore Projects</Link>
+          <a href="https://carworthai.ca/" target="_blank" rel="noopener noreferrer" className="secondary">
+            Visit CarWorthAI
+          </a>
+        </motion.div>
         <motion.div className="icons" variants={itemVariants}>
           <motion.a
             href="https://www.facebook.com/"
@@ -146,6 +161,63 @@ const HomepageStyled = styled.header`
       font-weight: 300;
       opacity: 0.9;
     }
+
+    .project-spotlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      margin-bottom: 1.1rem;
+      background: rgba(102, 126, 234, 0.12);
+      max-width: 100%;
+
+      svg {
+        font-size: 1.2rem;
+        color: var(--primary-color-light);
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--white-color);
+      }
+
+      a {
+        color: var(--primary-color-light);
+        font-weight: 700;
+      }
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+
+      a {
+        border-radius: 10px;
+        padding: 0.65rem 1.1rem;
+        font-weight: 700;
+        border: 1px solid transparent;
+        background: var(--primary-gradient);
+        color: #fff;
+        transition: var(--transition-smooth);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-lg);
+        }
+      }
+
+      .secondary {
+        background: transparent;
+        border-color: var(--primary-color);
+        color: var(--white-color);
+      }
+    }
+
     .icons {
       display: flex;
       justify-content: center;
@@ -198,7 +270,26 @@ const HomepageStyled = styled.header`
 
       .subtitle {
         font-size: clamp(0.9rem, 2vw, 1.2rem);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-spotlight {
+        border-radius: 14px;
+        padding: 0.65rem 0.8rem;
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+
+      .cta-group {
+        flex-wrap: wrap;
+        margin-bottom: 0.8rem;
+
+        a {
+          width: 100%;
+          max-width: 240px;
+        }
       }
 
       .icons {
